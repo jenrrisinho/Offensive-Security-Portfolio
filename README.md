@@ -15,12 +15,12 @@ Todas las pruebas se realizaron en entornos aislados y diseñados para práctica
 | `WEB/pentest-web-xvwa-sqli.pdf` | XVWA | Pentesting web | SQL Injection Error-based (extracción de nombre de BD vía XPATH) y Blind SQLi Boolean-based con Burp Intruder, más extracción automatizada de la tabla `users` con sqlmap. Herramientas: Burp Suite, sqlmap. |
 | `WEB/pentest-web-dvwa.pdf` | DVWA | Pentesting web | XSS Reflejado en el parámetro `item` (CVSS 7.1) y Command Injection / RCE mediante manipulación del campo de dirección IP. Herramientas: Burp Suite. |
 | `RED/pentesting-red-metasploitable3-lazyadmin.pdf` | Metasploitable3 + LazyAdmin (TryHackMe) | Pentesting de red | RCE en ManageEngine Desktop Central 9, SQL Injection en app Payroll, compromiso de autenticación con Pass-the-Hash, escalada de privilegios local, y DoS con MS15-034 sobre IIS. Herramientas: Nmap, Metasploit, SQLMap, wfuzz. |
-| `RED/pentesting-red-infraestructura-thales.pdf` | MV Thales | Pentesting de red | Informe de evaluación de infraestructura de red — reconocimiento, identificación de servicios vulnerables y explotación. |
+| `RED/pentesting-red-infraestructura-thales.pdf` | MV Thales ("Miletus") | Pentesting de red | Servidor sin servicios expuestos en red (puertos cerrados/filtrados); evaluación reorientada a seguridad física y de arranque. Explotación de GRUB sin autenticación (CWE-306) mediante inyección de `rw init=/bin/sh` en los parámetros del kernel, obteniendo shell root sin credenciales y extrayendo las flags de usuario y root. |
 
 ## Herramientas utilizadas (según el ejercicio)
 
 - **Reconocimiento / red:** Nmap
-- **Explotación:** Metasploit Framework, exploits manuales
+- **Explotación:** Metasploit Framework, exploits manuales, manipulación de parámetros de kernel/GRUB (acceso físico)
 - **Web:** Burp Suite (Repeater/Intruder), SQLMap, wfuzz, BeEF, payloads manuales
 
 ## Estructura
