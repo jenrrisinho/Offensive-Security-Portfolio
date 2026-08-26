@@ -54,7 +54,7 @@ Informes de pentest de infraestructura realizados en el curso **Pentesting en In
 
 | Documento | Entorno | Descripción breve | Herramientas |
 |---|---|---|---|
-| `RED/pentesting-red-metasploitable3-lazyadmin.pdf` | Metasploitable3 + LazyAdmin (TryHackMe) | RCE en ManageEngine Desktop Central 9, SQL Injection en app Payroll, compromiso de autenticación con Pass-the-Hash, escalada de privilegios local, y DoS con MS15-034 sobre IIS. | Nmap, Metasploit, SQLMap, wfuzz |
+| `RED/pentesting-red-metasploitable3-lazyadmin.pdf` | Metasploitable3 + LazyAdmin (TryHackMe) | RCE en ManageEngine Desktop Central 9, SQL Injection en app Payroll, compromiso de autenticación con Pass-the-Hash, escalada de privilegios local, y DoS con MS15-034 sobre IIS. | Nmap, wfuzz, Searchsploit, Metasploit, SQLMap, Netcat, CrackStation |
 | `RED/pentesting-red-infraestructura-thales.pdf` | Infraestructura de red — Servidor "Miletus" | Pentest de tipo Insider Threat/acceso físico sobre servidor Linux sin servicios de red expuestos. Explotación de configuración crítica de GRUB (sin contraseña) para editar parámetros de arranque, evadir autenticación y obtener acceso root. Extracción de flags como PoC. | GRUB, acceso físico/local |
 
 *(Otras plataformas como HackTheBox se agregarán aquí a medida que se completen retos)*
