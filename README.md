@@ -36,6 +36,7 @@ Writeups de práctica personal en TryHackMe, organizados por dificultad. Este ap
 |---|---|---|---|---|
 | **LazyAdmin** | `TryHackMe/Easy/LazyAdmin/LazyAdmin-TryHackMe.pdf` | 🟢 Easy | Backup disclosure en SweetRice 1.5.1 con extracción y crackeo de hash MD5, explotación de Arbitrary File Upload para obtener reverse shell, y escalada de privilegios a root vía permiso sudo NOPASSWD sobre un script Perl que invocaba un script shell modificable. | Nmap, wfuzz, searchsploit, CrackStation, Netcat |
 | **Grep** | `TryHackMe/Easy/Grep/Grep-TryHackMe.pdf` | 🟢 Easy | Reconocimiento OSINT sobre repositorio de GitHub expuesto (API key filtrada en historial de commits), bypass de validación de archivos (magic bytes) para subir una reverse shell PHP, RCE, y extracción de credenciales desde la base de datos. | Ffuf, Netcat, PHP CLI One-liner, Burp Suite, GitHub Code Search |
+| **Olympus** | `TryHackMe/Medium/Olympus/Olympus-TryHackMe.pdf` | 🟡 Medium | SQL Injection en formulario de búsqueda para extracción completa de BD (credenciales, hashes bcrypt). Hash cracking con John the Ripper. RCE vía bypass de validación de archivo upload en sistema de chat. Escalada de privilegios explotando binario SUID mal configurado (cputils). Acceso root mediante backdoor oculto en /lib/defended/. | Nmap, Ffuf, Burp Suite, John the Ripper, ssh2john, Curl, SSH, Netcat, grep, find |
 
 ### WEB
 
