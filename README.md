@@ -34,9 +34,9 @@ Writeups de práctica personal en TryHackMe, organizados por dificultad. Este ap
 
 | Room | Documento | Dificultad | Descripción breve | Herramientas |
 |---|---|---|---|---|
-| **LazyAdmin** | `TryHackMe/Easy/LazyAdmin/LazyAdmin-TryHackMe.pdf` | 🟢 Easy | Backup disclosure en SweetRice 1.5.1 con extracción y crackeo de hash MD5, explotación de Arbitrary File Upload para obtener reverse shell, y escalada de privilegios a root vía permiso sudo NOPASSWD sobre un script Perl que invocaba un script shell modificable. | Nmap, wfuzz, searchsploit, CrackStation, Netcat |
-| **Grep** | `TryHackMe/Easy/Grep/Grep-TryHackMe.pdf` | 🟢 Easy | Reconocimiento OSINT sobre repositorio de GitHub expuesto (API key filtrada en historial de commits), bypass de validación de archivos (magic bytes) para subir una reverse shell PHP, RCE, y extracción de credenciales desde la base de datos. | Ffuf, Netcat, PHP CLI One-liner, Burp Suite, GitHub Code Search |
-| **Olympus** | `TryHackMe/Medium/Olympus/Olympus-TryHackMe.pdf` | 🟡 Medium | SQL Injection en formulario de búsqueda para extracción completa de BD (credenciales, hashes bcrypt). Hash cracking con John the Ripper. RCE vía bypass de validación de archivo upload en sistema de chat. Escalada de privilegios explotando binario SUID mal configurado (cputils). Acceso root mediante backdoor oculto en /lib/defended/. | Nmap, Ffuf, Burp Suite, John the Ripper, ssh2john, Curl, SSH, Netcat, grep, find |
+| **LazyAdmin** | [LazyAdmin-TryHackMe.pdf](TryHackMe/Easy/LazyAdmin/LazyAdmin-TryHackMe.pdf) | 🟢 Easy | Backup disclosure en SweetRice con crackeo de hash MD5, Arbitrary File Upload para reverse shell, y escalada a root vía sudo NOPASSWD sobre script Perl/shell. | Nmap, wfuzz, searchsploit, CrackStation, Netcat |
+| **Grep** | [Grep-TryHackMe.pdf](TryHackMe/Easy/Grep/Grep-TryHackMe.pdf) | 🟢 Easy | OSINT sobre repo de GitHub expuesto (API key filtrada), bypass de validación de archivos para subir reverse shell PHP, RCE y extracción de credenciales de BD. | Ffuf, Netcat, PHP CLI One-liner, Burp Suite, GitHub Code Search |
+| **Olympus** | [Olympus-TryHackMe.pdf](TryHackMe/Medium/Olympus/Olympus-TryHackMe.pdf) | 🟡 Medium | SQLi para extraer BD completa, cracking con John the Ripper, RCE vía upload en chat, escalada por SUID mal configurado (cputils) y backdoor oculto para acceso root. | Nmap, Ffuf, Burp Suite, John the Ripper, ssh2john, Curl, SSH, Netcat, grep, find |
 
 ### WEB
 
@@ -44,10 +44,10 @@ Informes de pentest en aplicaciones web realizados en el curso **Pentesting en A
 
 | Documento | Entorno | Descripción breve | Herramientas |
 |---|---|---|---|
-| `WEB/pentest-web-testfire.pdf` | Testfire / Altoro Mutual (testfire.net) | Identificación y explotación de XSS Reflejado en el endpoint `search.jsp`, con PoC de extracción de cookie de sesión mediante URL manipulada. Severidad High. | Burp Suite |
-| `WEB/pentest-web-xvwa-xss.pdf` | XVWA | Explotación de XSS Reflejado (parámetro `item`, robo de cookies con script PHP propio) y XSS Almacenado (formulario de comentarios, control remoto del navegador con BeEF). | Burp Suite, BeEF |
-| `WEB/pentest-web-xvwa-sqli.pdf` | XVWA | SQL Injection Error-based (extracción de nombre de BD vía XPATH) y Blind SQLi Boolean-based con Burp Intruder, más extracción automatizada de la tabla `users` con sqlmap. | Burp Suite, sqlmap |
-| `WEB/pentest-web-dvwa.pdf` | DVWA | XSS Reflejado en el parámetro `item` (CVSS 7.1) y Command Injection / RCE mediante manipulación del campo de dirección IP. | Burp Suite |
+| [pentest-web-testfire.pdf](WEB/pentest-web-testfire.pdf) | Testfire / Altoro Mutual | XSS Reflejado en `search.jsp` con PoC de robo de cookie de sesión. Severidad High. | Burp Suite |
+| [pentest-web-xvwa-xss.pdf](WEB/pentest-web-xvwa-xss.pdf) | XVWA | XSS Reflejado (robo de cookies) y XSS Almacenado con control remoto del navegador vía BeEF. | Burp Suite, BeEF |
+| [pentest-web-xvwa-sqli.pdf](WEB/pentest-web-xvwa-sqli.pdf) | XVWA | SQLi Error-based (XPATH) y Blind SQLi Boolean-based con Intruder, más extracción automatizada con sqlmap. | Burp Suite, sqlmap |
+| [pentest-web-dvwa.pdf](WEB/pentest-web-dvwa.pdf) | DVWA | XSS Reflejado (CVSS 7.1) y Command Injection / RCE vía campo de IP. | Burp Suite |
 
 ### RED
 
@@ -55,8 +55,8 @@ Informes de pentest de infraestructura realizados en el curso **Pentesting en In
 
 | Documento | Entorno | Descripción breve | Herramientas |
 |---|---|---|---|
-| `RED/pentesting-red-metasploitable3-lazyadmin.pdf` | Metasploitable3 + LazyAdmin (TryHackMe) | RCE en ManageEngine Desktop Central 9, SQL Injection en app Payroll, compromiso de autenticación con Pass-the-Hash, escalada de privilegios local, y DoS con MS15-034 sobre IIS. | Nmap, wfuzz, Searchsploit, Metasploit, SQLMap, Netcat, CrackStation |
-| `RED/pentesting-red-infraestructura-thales.pdf` | Infraestructura de red — Servidor "Miletus" | Pentest de tipo Insider Threat/acceso físico sobre servidor Linux sin servicios de red expuestos. Explotación de configuración crítica de GRUB (sin contraseña) para editar parámetros de arranque, evadir autenticación y obtener acceso root. Extracción de flags como PoC. | GRUB, acceso físico/local |
+| [pentesting-red-metasploitable3-lazyadmin.pdf](RED/pentesting-red-metasploitable3-lazyadmin.pdf) | Metasploitable3 + LazyAdmin | RCE en ManageEngine Desktop Central 9, SQLi en Payroll, Pass-the-Hash, escalada local y DoS con MS15-034. | Nmap, wfuzz, Searchsploit, Metasploit, SQLMap, Netcat, CrackStation |
+| [pentesting-red-infraestructura-thales.pdf](RED/pentesting-red-infraestructura-thales.pdf) | Servidor "Miletus" | Insider Threat/acceso físico: GRUB sin contraseña para evadir autenticación y obtener acceso root. | GRUB, acceso físico/local |
 
 *(Otras plataformas como HackTheBox se agregarán aquí a medida que se completen retos)*
 
