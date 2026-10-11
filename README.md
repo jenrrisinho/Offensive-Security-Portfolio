@@ -37,6 +37,7 @@ Writeups de práctica personal en TryHackMe, organizados por dificultad. Este ap
 | **LazyAdmin** | [LazyAdmin-TryHackMe.pdf](TryHackMe/Easy/LazyAdmin/LazyAdmin-TryHackMe.pdf) | 🟢 Easy | Backup disclosure en SweetRice con crackeo de hash MD5, Arbitrary File Upload para reverse shell, y escalada a root vía sudo NOPASSWD sobre script Perl/shell. | Nmap, wfuzz, searchsploit, CrackStation, Netcat |
 | **Grep** | [Grep-TryHackMe.pdf](TryHackMe/Easy/Grep/Grep-TryHackMe.pdf) | 🟢 Easy | OSINT sobre repo de GitHub expuesto (API key filtrada), bypass de validación de archivos para subir reverse shell PHP, RCE y extracción de credenciales de BD. | Ffuf, Netcat, PHP CLI One-liner, Burp Suite, GitHub Code Search |
 | **Olympus** | [Olympus-TryHackMe.pdf](TryHackMe/Medium/Olympus/Olympus-TryHackMe.pdf) | 🟡 Medium | SQLi para extraer BD completa, cracking con John the Ripper, RCE vía upload en chat, escalada por SUID mal configurado (cputils) y backdoor oculto para acceso root. | Nmap, Ffuf, Burp Suite, John the Ripper, ssh2john, Curl, SSH, Netcat, grep, find |
+| **Pickle Rick** | [Pickle_Rick-TryHackMe.pdf](TryHackMe/Easy/Pickle_Rick/Pickle_Rick-TryHackMe.pdf) | 🟢 Easy | Credenciales filtradas en código fuente y robots.txt, RCE vía panel de comandos con bypass de filtro, reverse shell y escalada a root por sudo NOPASSWD mal configurado. | Gobuster, Curl, Netcat, find, sudo |
 
 ### WEB
 
