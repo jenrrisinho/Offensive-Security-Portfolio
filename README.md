@@ -39,6 +39,7 @@ Writeups de práctica personal en TryHackMe, organizados por dificultad. Este ap
 | **Olympus** | [Olympus-TryHackMe.pdf](TryHackMe/Medium/Olympus/Olympus-TryHackMe.pdf) | 🟡 Medium | SQLi para extraer BD completa, cracking con John the Ripper, RCE vía upload en chat, escalada por SUID mal configurado (cputils) y backdoor oculto para acceso root. | Nmap, Ffuf, Burp Suite, John the Ripper, ssh2john, Curl, SSH, Netcat, grep, find |
 | **Pickle Rick** | [Pickle_Rick-TryHackMe.pdf](TryHackMe/Easy/Pickle_Rick/Pickle_Rick-TryHackMe.pdf) | 🟢 Easy | Credenciales filtradas en código fuente y robots.txt, RCE vía panel de comandos con bypass de filtro, reverse shell y escalada a root por sudo NOPASSWD mal configurado. | Gobuster, Curl, Netcat, find, sudo |
 | **TryHack3M: Bricks Heist** | [TryHack3M-TryHackMe.pdf](TryHackMe/Easy/TryHack3M/TryHack3M-TryHackMe.pdf) | 🟢 Easy | RCE no autenticado en WordPress vía theme Bricks Builder (CVE-2024-25600), hunting de un servicio/proceso de persistencia disfrazado y atribución de una wallet de minería de criptomonedas a un afiliado sancionado de LockBit. | Metasploit, Nmap, CyberChef, systemctl, OpenSanctions |
+| **Basic Pentesting** | [Basic_Pentesting-TryHackMe.pdf](TryHackMe/Easy/Basic_Pentesting/Basic_Pentesting-TryHackMe.pdf) | 🟢 Easy | Enumeración SMB con enum4linux, fuerza bruta de credenciales SSH, movimiento lateral vía llave SSH crackeada offline, y escalada a root por sudo mal configurado. | Nmap, Gobuster, enum4linux, Hydra, ssh2john, John the Ripper |
 
 ### WEB
 
@@ -73,6 +74,9 @@ Informes de pentest de infraestructura realizados en el curso **Pentesting en In
 | | Gobuster | <https://github.com/OJ/gobuster> |
 | | ffuf | <https://github.com/ffuf/ffuf> |
 | | wfuzz | <https://github.com/xmendez/wfuzz> |
+| | enum4linux | <https://github.com/CiscoCXSecurity/enum4linux> |
+| **Fuerza Bruta / Cracking** | Hydra | <https://github.com/vanhauser-thc/thc-hydra> |
+| | John the Ripper | <https://www.openwall.com/john/> |
 | **Explotación y Post-Explotación** | Metasploit Framework | <https://www.metasploit.com/> |
 | | searchsploit (Exploit-DB) | <https://gitlab.com/exploit-database/exploitdb> |
 | **Cracking de Hashes** | CrackStation | <https://crackstation.net/> |
